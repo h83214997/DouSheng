@@ -33,7 +33,7 @@ func (h *Handler) Register(c *gin.Context) error {
 		return exception.WithStatusCode(constant.ERROR_ARGS_VALIDATE)
 	}
 
-	// 2、进行接口调用
+	//  2、进行接口调用 在DouSheng/user_center/apps/user/user_grpc.pb.go的serviceClient对象的方法
 	resp, err := h.service.Register(c.Request.Context(), req)
 	if err != nil {
 		return exception.GrpcErrWrapper(err)
