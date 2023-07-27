@@ -1,0 +1,6 @@
+api_router/apps里的文件（如user）包含http.go和业务.Go
+http.go里定义handler并实现Init和Name方法，在init（）函数中调用ioc.GinDI(handler)将其放入Ioc容器里，方便初始化对其他结构体的依赖
+业务.go文件创建返回消息体，并实现路由绑定的函数，都是对应handler的方法
+
+Ioc：dou_kit/ioc
+
