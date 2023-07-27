@@ -39,6 +39,7 @@ func (h *Handler) Init() error {
 	if err != nil {
 		return err
 	}
+	// 这是一个接口，里面包含多种方法
 	h.service = client.UserService()
 	return nil
 }
